@@ -58,40 +58,7 @@ async def inline_query_handler(client, query):
         )
 
     answers = []
-    if string.split()[0] == "nhentai":
-        if len(string.split()) == 1:
-            await client.answer_inline_query(query.id,
-                                            results=answers,
-                                            switch_pm_text="Enter nHentai ID",
-                                            switch_pm_parameter="start"
-                                            )
-            return
-        squery = string.split(None, 1)[1]
-        n_title, tags, artist, total_pages, post_url, cover_image = nhentai_data(squery)
-        reply_message = f"<code>{n_title}</code>\n\n<b>Tags:</b>\n{tags}\n<b>Artists:</b>\n{artist}\n<b>Pages:</b>\n{total_pages}"
-        await client.answer_inline_query(query.id,
-            results=[
-                InlineQueryResultArticle(
-                        title=n_title,
-                        input_message_content=InputTextMessageContent(
-                            reply_message
-                        ),
-                        description=tags,
-                        thumb_url=cover_image,
-                        reply_markup=InlineKeyboardMarkup(
-                            [[
-                            InlineKeyboardButton(
-                                "Read Here",
-                                url=post_url
-                                )
-                            ]]
-                        )
-                    )
-            ],
-            cache_time=1
-        )
-
-    elif string.split()[0] == "anime":
+    if string.split()[0] == "anime":
         if len(string.split()) == 1:
             await client.answer_inline_query(query.id,
                                             results=answers,
@@ -246,7 +213,7 @@ async def inline_query_handler(client, query):
         variables = {'query': search}
         json = requests.post(url, json={'query': character_query, 'variables': variables}).json()['data']['Character']
         if json:
-            ms_g = f"**{json.get('name').get('full')}**(`{json.get('name').get('native')}`)\n❤️ Favourites : {json['favourites']}\n"
+            ms_g = f"**{json.get('name').get('full')}**(`{json.get('name').get('native')}`)\n Favorite : {json['favourites']}\n"
             description = f"{json['description']}"
             site_url = json.get('siteUrl')
             ms_g += shorten(description, site_url)
@@ -258,7 +225,7 @@ async def inline_query_handler(client, query):
                     photo_url=image,
                     parse_mode="markdown",
                     title=f"{json.get('name').get('full')}",
-                    description=f"❤️{json['favourites']}",
+                    description=f"{json['favourites']}",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("More Info", url=site_url)]])))
             else:
                 answers.append(InlineQueryResultArticle(

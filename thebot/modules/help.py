@@ -9,8 +9,7 @@ from thebot.utils.errors import capture_err
 buttons = [
     [
         InlineKeyboardButton('Anime', switch_inline_query_current_chat='anime '),
-        InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga '),
-        InlineKeyboardButton('nHentai', switch_inline_query_current_chat='nhentai ')
+        InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga ')
     ],
     [
         InlineKeyboardButton('Airing', switch_inline_query_current_chat='airing '),
@@ -32,8 +31,7 @@ async def help(_, message):
     buttons = [
         [
             InlineKeyboardButton('Anime', switch_inline_query_current_chat='anime '),
-            InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga '),
-            InlineKeyboardButton('nHentai', switch_inline_query_current_chat='nhentai ')
+            InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga ')
         ],
         [
             InlineKeyboardButton('Airing', switch_inline_query_current_chat='airing '),
@@ -48,6 +46,6 @@ async def help(_, message):
     else:
         buttons = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Help",
-                url=f"t.me/TheEsseXBot?start=help")]])
+                url=f"t.me/SouyaKawataBot?start=help")]])
         await message.reply("Click the button below.",
                             reply_markup=buttons)

@@ -21,7 +21,7 @@ buttons = [
 @capture_err
 async def chelp(_, client):
     await client.edit_message_text(
-        'Available cmds for now :\n /animeinfo - search anime on AniList\n /mangainfo - search manga on Anilist\n /charinfo - search character on Anilist\n /airinfo - check airing status of an anime\n /wa by replying to a media - find what anime a media is from\n.',
+        'Available cmds for now :\n /animeinfo - search anime on AniList\n /mangainfo - search manga on Anilist\n /charinfo - search character on Anilist\n /airinfo - check airing status of an anime\n.',
         reply_markup=InlineKeyboardMarkup(buttons)
     )
 
@@ -40,7 +40,7 @@ async def help(_, message):
     ]
     if message.chat.type == "private":
        await message.reply_text(
-        'Available cmds for now :\n /animeinfo - search anime on AniList\n /mangainfo - search manga on Anilist\n /charinfo - search character on Anilist\n /airinfo - check airing status of an anime\n /wa by replying to a media - find what anime a media is from\n.',
+        'Available cmds for now :\n /animeinfo - search anime on AniList\n /mangainfo - search manga on Anilist\n /charinfo - search character on Anilist\n /airinfo - check airing status of an anime\n.',
         reply_markup=InlineKeyboardMarkup(buttons)
         )
     else:

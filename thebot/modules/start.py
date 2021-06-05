@@ -22,9 +22,9 @@ async def start(_, message):
                         InlineKeyboardButton('Character', switch_inline_query_current_chat='char ')
                      ]
                   ]
-          await message.reply_text('Available cmds for now :\n /animeinfo - search anime on AniList\n /mangainfo - search manga on Anilist\n /charinfo - search character on Anilist\n /airinfo - check airing status of an anime\n /wa by replying to a media - find what anime a media is from\n /nhentai ID - returns the nhentai in telegraph instant preview format.', reply_markup=InlineKeyboardMarkup(buttons))
+          await message.reply_text('Available cmds for now :\n /animeinfo - search anime on AniList\n /mangainfo - search manga on Anilist\n /charinfo - search character on Anilist\n /airinfo - check airing status of an anime\n /wa by replying to a media - find what anime a media is from\n.', reply_markup=InlineKeyboardMarkup(buttons))
      else:
-       photo = "https://telegra.ph/file/19dad86d7b1009f1d6911.jpg"
+       photo = "https://telegra.ph/file/f154371daaca23b7268e9.jpg"
        buttons = [
             [
             InlineKeyboardButton('Anime', switch_inline_query_current_chat='anime '),

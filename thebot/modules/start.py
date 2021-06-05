@@ -15,8 +15,7 @@ async def start(_, message):
           buttons = [
                      [
                         InlineKeyboardButton('Anime', switch_inline_query_current_chat='anime '),
-                        InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga '),
-                        InlineKeyboardButton('nHentai', switch_inline_query_current_chat='nhentai ')
+                        InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga ')
                      ],
                      [
                         InlineKeyboardButton('Airing', switch_inline_query_current_chat='airing '),
@@ -29,8 +28,7 @@ async def start(_, message):
        buttons = [
             [
             InlineKeyboardButton('Anime', switch_inline_query_current_chat='anime '),
-            InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga '),
-            InlineKeyboardButton('nHentai', switch_inline_query_current_chat='nhentai ')
+            InlineKeyboardButton('Manga', switch_inline_query_current_chat='manga ')
             ],
             [
             InlineKeyboardButton('Airing', switch_inline_query_current_chat='airing '),
@@ -41,7 +39,7 @@ async def start(_, message):
             ]
                   ]
        await message.reply_photo(photo,
-         caption='Hi, uwu >//////<\nCheck Help to know what I can do ;)\nSeach in Inline by Clicking these buttons below!',
+         caption='Hi,\nCheck Help to know what I can do ;)\nSeach in Inline by Clicking these buttons below!',
          reply_markup=InlineKeyboardMarkup(buttons))
    else:
-       await message.reply_text("Hi there, I'm EsseX.")
+       await message.reply_text("Hey!. Iam Souya!")

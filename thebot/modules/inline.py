@@ -31,7 +31,7 @@ async def inline_query_handler(client, query):
             results=[
                 InlineQueryResultPhoto(
                     caption="Heyya, Try me in Inline by Pressing these buttons below",
-                    photo_url="https://telegra.ph/file/ed938a282abcd7a87a033.jpg",
+                    photo_url="https://telegra.ph/file/f595359e88749f3d63b7a.jpg",
                     parse_mode="markdown",
                     title=f"Need Help?",
                     description=f"Click Here..",
@@ -46,7 +46,7 @@ async def inline_query_handler(client, query):
                         InlineKeyboardButton("Character", switch_inline_query_current_chat="char ")
                         ],
                         [
-                        InlineKeyboardButton(text="Help", url="https://t.me/TheEsseXBot?start=help")
+                        InlineKeyboardButton(text="Help", url="https://t.me/SouyaKawataBot?start=help")
                         ]]
                     )
                 ),
@@ -61,7 +61,7 @@ async def inline_query_handler(client, query):
         if len(string.split()) == 1:
             await client.answer_inline_query(query.id,
                                             results=answers,
-                                            switch_pm_text="Search an Anime",
+                                            switch_pm_text="Search a Anime",
                                             switch_pm_parameter="start"
                                             )
             return
@@ -119,7 +119,7 @@ async def inline_query_handler(client, query):
         if len(string.split()) == 1:
             await client.answer_inline_query(query.id,
                                             results=answers,
-                                            switch_pm_text="Search Manga",
+                                            switch_pm_text="Search Ur Manga",
                                             switch_pm_parameter="start"
                                             )
             return
@@ -165,7 +165,7 @@ async def inline_query_handler(client, query):
         if len(string.split()) == 1:
             await client.answer_inline_query(query.id,
                                             results=answers,
-                                            switch_pm_text="Get the Airing Status",
+                                            switch_pm_text="Get Airing Status",
                                             switch_pm_parameter="start"
                                             )
             return
@@ -204,7 +204,7 @@ async def inline_query_handler(client, query):
         if len(string.split()) == 1:
             await client.answer_inline_query(query.id,
                                             results=answers,
-                                            switch_pm_text="Get Character Info",
+                                            switch_pm_text="Get Your Favorite Character Info",
                                             switch_pm_parameter="start"
                                             )
             return

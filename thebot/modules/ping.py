@@ -31,5 +31,5 @@ async def ping_bot(_, message):
     end_time = time.time()
     ping_time = round((end_time - start_time) * 1000, 3)
     uptime = get_readable_time((time.time() - StartTime))
-    await m.edit_text(f"**EsseX replied in:** `{ping_time}ms`\n**EsseX uptime:** {uptime}", parse_mode='markdown')
+    await m.edit_text(f"**replied in:** `{ping_time}ms`\n**uptime:** {uptime}", parse_mode='markdown')
 

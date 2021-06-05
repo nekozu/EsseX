@@ -9,7 +9,6 @@ from thebot import dankbot
 from datetime import datetime
 from pyrogram import errors, __version__
 from pyrogram.errors import PeerIdInvalid
-from thebot.modules.nhentai import nhentai, nhentai_data
 from thebot.modules.anilist import url, anime_query, manga_query, shorten, airing_query, character_query
 from pyrogram.types import (
     InlineKeyboardButton,
